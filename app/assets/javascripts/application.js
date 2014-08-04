@@ -12,4 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery.remotipart
+//= require bootstrap.min
+//= require bootstrap.file-input
+//= require _extensions.js.coffee
+//= require item_app.js.coffee
+//= require main
+
+//= require_self

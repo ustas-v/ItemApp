@@ -1,0 +1,11 @@
+tr id="item-#{item.id}"
+  td.col-md-5 = item.name
+  td.col-md-3
+    img src="#{item.picture_for_list}" alt='' class='img-thumbnail'
+  td.col-md-2.action-block
+    = link_to 'Редактировать', edit_item_path(item.id), remote: true
+  td.col-md-2.action-block
+    = link_to 'Удалить', item_path(item.id), remote: true, method: :delete, confirm: 'Удалить?'
+
+  tr.edit-item-row id="edit-item-row-#{item.id}"
+    td colspan='4'

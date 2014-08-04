@@ -1,0 +1,9 @@
+
+item_app.clear_new_form();
+
+<% if flash.now[:error].present? %>
+  $('#new-error').html("<%= j flash.now[:error] -%>").show();
+<% else %>
+  $('#new-error').html('').hide();
+  $('#list-items').html("<%= j render(partial: 'list-items') -%>");
+<% end %>

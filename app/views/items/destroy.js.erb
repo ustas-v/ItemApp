@@ -1,0 +1,5 @@
+
+<% if @item.present? %>
+  $("#edit-item-row-<%= @item.id -%>").remove();
+  $('#item-<%= @item.id -%>').remove();
+<% end %>

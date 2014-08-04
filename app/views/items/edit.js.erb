@@ -1,0 +1,13 @@
+
+<% if @item.present? %>
+  $("#edit-item-row-<%= @item.id -%> > td").
+        html("<%= j render(partial: 'items/form', locals: { form_title: 'Редактирование Item\'а', image_title: '+ Заменить картинку' }) -%>");
+
+  item_app.decorate_file_input(
+          $("#edit-item-row-<%= @item.id -%>").find('input[type=file]')
+  );
+  item_app.observe_form(
+          $("#edit-item-row-<%= @item.id -%>")
+  );
+  $("#edit-item-row-<%= @item.id -%>").show();
+<% end %>

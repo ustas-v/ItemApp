@@ -1,3 +1,55 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1.header {
+  padding-bottom: 20px;
+}
+
+div.container-fluid {
+  span.form-header, span.list-header {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  span.list-header {
+    margin-top: 20px;
+  }
+
+  div.form-container, div.list-container {
+    border: dashed 1px #000;
+    width: 800px;
+    padding: 20px;
+
+    div.errors-container {
+      display: none;
+      color: red;
+    }
+
+    table.list-table {
+      width: 100%;
+
+      tr {
+        border-bottom: solid white 10px;
+      }
+
+      tr.edit-item-row {
+        display: none;
+      }
+
+      td.action-block {
+        text-align: right;
+      }
+    }
+
+    input.input-title {
+      width: 300px;
+    }
+  }
+
+  div.list-container {
+    padding: 20px 0 20px 0;
+    border-left: none;
+    border-right: none;
+  }
+}

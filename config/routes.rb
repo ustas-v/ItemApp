@@ -1,4 +1,11 @@
+# -*- encoding: utf-8 -*-
+
 ItemApp::Application.routes.draw do
+
+  root to: 'main#index'
+
+  resources :items
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

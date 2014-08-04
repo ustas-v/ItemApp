@@ -1,0 +1,9 @@
+
+<% if flash.now[:error].present? %>
+  $('#edit-error-<%= @item.id -%>').html("<%= j flash.now[:error] -%>").show();
+<% else %>
+  $("#edit-item-row-<%= @item.id -%>").remove();
+  $('#item-<%= @item.id -%>').replaceWith(
+        "<%= j render(partial: 'items/item', locals: { item: @item }) -%>"
+  );
+<% end %>

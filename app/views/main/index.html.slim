@@ -1,0 +1,9 @@
+
+h1.header Items
+
+div.container-fluid
+
+  == render partial: 'items/form', locals: { form_title: 'Форма добавления нового Item\'а', image_title: '+ Прикрепить картинку' }
+
+  div#list-items
+    == render 'items/list-items'

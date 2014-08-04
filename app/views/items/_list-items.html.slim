@@ -1,0 +1,8 @@
+span.list-header
+  | Список Item'ов
+
+  div.list-container
+
+    table.list-table
+      - @items.each do |item|
+        = render partial: 'items/item', locals: { item: item }

@@ -1,0 +1,17 @@
+
+span.form-header = form_title
+
+div.form-container
+  = form_for @item, html: { class: 'form-inline', role: 'form', multipart: true }, remote: true do |f|
+    div.row
+      div.form-group
+        = f.text_field :name, class: 'form-control input-title', placeholder: 'Название'
+      div.form-group
+        = f.file_field :picture, title: image_title
+      div.form-group
+        = f.submit 'Сохранить', class: 'btn btn-primary', disable_with: 'Отправляется...'
+    - if @item.new_record?
+      div.row.errors-container id="new-error"
+    - else
+      div.row.errors-container id="edit-error-#{@item.id}"
+      a.cancel-edit-form href="#" data-edit-form-id="#{@item.id}" Отменить редактирование
